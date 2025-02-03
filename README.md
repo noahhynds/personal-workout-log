@@ -12,3 +12,11 @@ This functionality will include:
 - Workout Session Creation
 - Training Notes and Observations
 - Workout Session Review
+
+## User Stories
+
+- As a user, I want to create a new workout
+- As a user, I want to add an exercise to a workout
+- As a user, I want to mark an exercise as complete in the workout
+- As a user, I want to add *comments* to each exercise
+- As a user, I want to view the list of exercises in the current workout
