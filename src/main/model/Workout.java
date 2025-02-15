@@ -1,14 +1,29 @@
 package model;
 
 import java.util.*;
+import java.time.LocalDate;
 
 // Represent a workout having exercises
 
 public class Workout {
 
     // EFFECTS: creates a workout with no exercises added yet and a status of not
-    // completed yet and ID
+    // completed yet, ID, date, and title
     public Workout() {
+
+    }
+
+    // REQUIRES: cannot be empty string
+    // MODIFIES: this
+    // EFFECTS: sets the title of the workout
+    public void setTitle(String title) {
+
+    }
+
+    // REQUIRES: a date
+    // MODIFIES: this
+    // EFFECTS: sets the date of the workout
+    public void setDate(LocalDate date) {
 
     }
 
