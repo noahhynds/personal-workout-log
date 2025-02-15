@@ -17,6 +17,8 @@ This functionality will include:
 
 - As a user, I want to create a new workout
 - As a user, I want to add an exercise to a workout
-- As a user, I want to mark an exercise as complete in the workout
-- As a user, I want to add *comments* to each exercise
+- As a user, I want to add *comments* to the workout
 - As a user, I want to view the list of exercises in the current workout
+- As a user, I want to mark a workout as complete
+- As a user, I want to add a workout to my log
+- As a user, I want to view all workouts in my log
