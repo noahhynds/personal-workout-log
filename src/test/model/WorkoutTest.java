@@ -28,6 +28,15 @@ public class WorkoutTest {
     }
 
     @Test
+    void testSetDate() {
+        assertEquals(today, workout.getDate());
+        workout.setDate(LocalDate.of(2024, 12, 12));
+        assertEquals(LocalDate.of(2024, 12, 12), workout.getDate());
+
+
+    }
+
+    @Test
     void testAddExercise() {
         workout.addExercise("Push Up");
         assertEquals(1, workout.exercises.size());
