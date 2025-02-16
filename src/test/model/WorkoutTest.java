@@ -80,11 +80,13 @@ public class WorkoutTest {
     @Test
     void testAddComment() {
         workout.addComment("Comment 1");
-        assertTrue(workout.getComments().size() == 1);
+        assertEquals(1, workout.getComments().size());
         workout.addComment("Comment 2");
-        assertTrue(workout.getComments().size() == 2);
+        assertEquals(2, workout.getComments().size());
         assertEquals("Comment 1", workout.getComments().get(0));
         assertEquals("Comment 2", workout.getComments().get(1));
+
+
 
     }
 }
