@@ -33,7 +33,6 @@ public class WorkoutTest {
         workout.setDate(LocalDate.of(2024, 12, 12));
         assertEquals(LocalDate.of(2024, 12, 12), workout.getDate());
 
-
     }
 
     @Test
@@ -46,7 +45,6 @@ public class WorkoutTest {
 
         assertFalse(workout.addExercise(null));
         assertFalse(workout.addExercise(""));
-        
 
     }
 
@@ -60,7 +58,6 @@ public class WorkoutTest {
         workout.addExercise("Bench Press");
         workout.addExercise("Pull Up");
 
-        
         assertEquals(3, workout.getAllExercises().size());
         assertEquals("Push Up", workout.getAllExercises().get(0));
         assertEquals("Bench Press", workout.getAllExercises().get(1));
@@ -85,8 +82,6 @@ public class WorkoutTest {
         assertEquals(2, workout.getComments().size());
         assertEquals("Comment 1", workout.getComments().get(0));
         assertEquals("Comment 2", workout.getComments().get(1));
-
-
 
     }
 }
