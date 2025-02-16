@@ -12,12 +12,12 @@ public class WorkoutLog {
         workouts = new ArrayList<>();
     }
 
-    // REQUIRES: workout is complete and not already in workout log and not empty
+    // REQUIRES: not already in workout log and not null
     // MODIFIES: this
     // EFFECTS: adds a workout to log and return true
     // if workout is in log already return false
     public boolean addWorkoutToLog(Workout workout) {
-        if (workout == null || workout.exercises.isEmpty()) {
+        if (workout == null) {
             return false;
         }
 
@@ -36,6 +36,18 @@ public class WorkoutLog {
             return workouts;
         }
         return Collections.emptyList();
+    }
+
+    // EFFECTS: gets singular workout
+    public Workout getWorkout(String id) {
+
+        for (Workout w : workouts) {
+            if (id.equals(w.getId())) {
+                return w;
+            }
+
+        }
+        return null;
     }
 
 }
