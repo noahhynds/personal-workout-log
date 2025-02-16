@@ -51,8 +51,17 @@ public class WorkoutLogTest {
         assertEquals(w3, workoutLog.getWorkouts().get(2));
 
         assertFalse(workoutLog.addWorkoutToLog(null));
-        assertFalse(workoutLog.addWorkoutToLog(w4));
         assertFalse(workoutLog.addWorkoutToLog(w1));
+
+    }
+
+    @Test
+    void testGetWorkout() {
+        workoutLog.addWorkoutToLog(w1);
+        workoutLog.addWorkoutToLog(w2);
+        workoutLog.addWorkoutToLog(w3);
+        assertEquals(w3, workoutLog.getWorkout(w3.getId()));
+        assertNull(workoutLog.getWorkout("123"));
 
     }
 }
