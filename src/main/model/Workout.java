@@ -49,11 +49,11 @@ public class Workout {
         if (exercise == null || exercise.isEmpty()) {
             return false;
         }
-        
+
         if (!exercises.contains(exercise)) {
             exercises.add(exercise);
             return true;
-        } 
+        }
         return false;
     }
 
@@ -69,7 +69,6 @@ public class Workout {
     public List<String> getComments() {
         return this.comments;
     }
-
 
     // EFFECTS: returns list of exercises
     // if no exercises return empty list
