@@ -35,14 +35,23 @@ public class WorkoutTest {
         assertEquals(2, workout.exercises.size());
         assertFalse(workout.addExercise("Bench Press"));
 
+        assertFalse(workout.addExercise(null));
+        assertFalse(workout.addExercise(""));
+        
+
     }
 
     @Test
     void testGetAllExercises() {
+
+        assertEquals(0, workout.getAllExercises().size());
+        assertEquals(Collections.emptyList(), workout.getAllExercises());
+
         workout.addExercise("Push Up");
         workout.addExercise("Bench Press");
         workout.addExercise("Pull Up");
 
+        
         assertEquals(3, workout.getAllExercises().size());
         assertEquals("Push Up", workout.getAllExercises().get(0));
         assertEquals("Bench Press", workout.getAllExercises().get(1));
@@ -66,6 +75,7 @@ public class WorkoutTest {
         workout.addComment("Comment 2");
         assertTrue(workout.getComments().size() == 2);
         assertEquals("Comment 1", workout.getComments().get(0));
+        assertEquals("Comment 2", workout.getComments().get(1));
 
     }
 }
