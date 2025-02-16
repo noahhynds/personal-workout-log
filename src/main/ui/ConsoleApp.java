@@ -32,8 +32,9 @@ public class ConsoleApp {
         System.out.println("2. Add an exercise");
         System.out.println("3. View all workouts");
         System.out.println("4. Add comment to a workout");
-        System.out.println("5. Quit");
-        System.out.print("Choose an option (1-5): ");
+        System.out.println("5. Mark a workout as complete");
+        System.out.println("6. Quit");
+        System.out.print("Choose an option (1-6): ");
 
     }
 
@@ -62,6 +63,9 @@ public class ConsoleApp {
                 addComments();
                 break;
             case "5":
+                markAsComplete();
+                break;
+            case "6":
                 quitApp();
                 break;
             default:
@@ -105,33 +109,47 @@ public class ConsoleApp {
     private void viewWorkouts() {
         System.out.println("\n*** Your Workouts ***");
         for (Workout workout : workoutLog.getWorkouts()) {
-            // show date
-            System.out.println("\nDate: " + workout.getDate());
-            // show title
-            System.out.println("Title: " + workout.getTitle());
-            // show id
-            System.out.println("ID: " + workout.getId());
-            // Show exercises
-            if (!workout.getAllExercises().isEmpty()) {
-                System.out.println("Exercises:");
-                for (String exercise : workout.getAllExercises()) {
-                    System.out.println("- " + exercise);
-                }
-            }
-            // show comments
-            if (!workout.getComments().isEmpty()) {
-                System.out.println("Comments:");
-                for (String comment : workout.getComments()) {
-                    System.out.println("- " + comment);
-                }
-            }
+            System.out.println("\nDate: " + workout.getDate()); // show date
+            System.out.println("Title: " + workout.getTitle()); // show title
+            System.out.println("ID: " + workout.getId()); // show id
+            showStatus(workout);
+            showExercises(workout);
+            showComments(workout);
         }
-
         if (workoutLog.getWorkouts().isEmpty()) {
             System.out.println("You have added no workouts yet");
 
         }
 
+    }
+
+    // EFFECTS: shows status
+    private void showStatus(Workout workout) {
+        if (workout.getStatusOfWorkout()) {
+            System.out.println("Status: complete");
+        } else {
+            System.out.println("Status: incomplete");
+        }
+    }
+
+    // EFFECTS: shows exercises
+    private void showExercises(Workout workout) {
+        if (!workout.getAllExercises().isEmpty()) {
+            System.out.println("Exercises:");
+            for (String exercise : workout.getAllExercises()) {
+                System.out.println("- " + exercise);
+            }
+        }
+    }
+
+    // EFFECTS: shows comments
+    private void showComments(Workout workout) {
+        if (!workout.getComments().isEmpty()) {
+            System.out.println("Comments:");
+            for (String comment : workout.getComments()) {
+                System.out.println("- " + comment);
+            }
+        }
     }
 
     // EFFECTS: add comments to selected workout
@@ -150,6 +168,26 @@ public class ConsoleApp {
             String comment = scanner.nextLine();
             w.addComment(comment);
             System.out.println("Comment successfully added");
+        } else {
+            System.out.println("No workout found for that ID");
+        }
+
+    }
+
+    // EFFECTS: adds exercise to a selected workout
+    private void markAsComplete() {
+        System.out.print("Which workout do you want to mark as complete (ID): ");
+        for (Workout workout : workoutLog.getWorkouts()) {
+            System.out.println("\nDate: " + workout.getDate());
+            System.out.println("Title: " + workout.getTitle());
+            System.out.println("ID: " + workout.getId());
+        }
+
+        String workoutChoice = scanner.nextLine();
+        Workout w = workoutLog.getWorkout(workoutChoice);
+        if (w != null) {
+            w.markWorkoutAsComplete();
+            System.out.println("Successfully marked as complete");
         } else {
             System.out.println("No workout found for that ID");
         }
