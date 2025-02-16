@@ -16,7 +16,6 @@ public class WorkoutLogTest {
     Workout w4;
     String exercise1;
 
-
     @BeforeEach
     void runBefore() {
         workoutLog = new WorkoutLog();
@@ -51,12 +50,9 @@ public class WorkoutLogTest {
         assertEquals(w2, workoutLog.getWorkouts().get(1));
         assertEquals(w3, workoutLog.getWorkouts().get(2));
 
-
         assertFalse(workoutLog.addWorkoutToLog(null));
         assertFalse(workoutLog.addWorkoutToLog(w4));
         assertFalse(workoutLog.addWorkoutToLog(w1));
-
-
 
     }
 }
