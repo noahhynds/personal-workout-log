@@ -11,6 +11,7 @@ public class Workout {
     String title;
     LocalDate date;
     List<String> comments;
+    String id;
 
     // REQUIRES: title to be made, must be non zero string
     // EFFECTS: creates a workout with no exercises added yet and a status of not
@@ -21,6 +22,7 @@ public class Workout {
         this.title = title;
         this.comments = new ArrayList<>();
         this.isComplete = false;
+        this.id = UUID.randomUUID().toString();
     }
 
     // EFFECTS: gets the title of the workout
@@ -38,6 +40,11 @@ public class Workout {
     // EFFECTS: get the date of the workout
     public LocalDate getDate() {
         return this.date;
+    }
+
+    // EFFECTS: gets id
+    public String getId() {
+        return this.id;
     }
 
     // REQUIRES: workout has been created and exercise not already in list
