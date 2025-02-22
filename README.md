@@ -22,3 +22,6 @@ This functionality will include:
 - As a user, I want to mark a workout as complete
 - As a user, I want to add a workout to my log
 - As a user, I want to view all workouts in my log
+
+- As a user, I want to be able to save my workouts to file
+- As a user, I want to be able to load my workout histroy from file
