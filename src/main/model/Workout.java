@@ -6,12 +6,13 @@ import java.time.LocalDate;
 // Represent a workout having exercises
 
 public class Workout {
-    List<String> exercises;
-    Boolean isComplete;
-    String title;
-    LocalDate date;
-    List<String> comments;
-    String id;
+
+    private String id;
+    private LocalDate date;
+    private String title;
+    private Boolean isComplete;
+    private List<String> exercises;
+    private List<String> comments;
 
     // REQUIRES: title to be made, must be non zero string
     // EFFECTS: creates a workout with no exercises added yet and a status of not
@@ -23,6 +24,18 @@ public class Workout {
         this.comments = new ArrayList<>();
         this.isComplete = false;
         this.id = UUID.randomUUID().toString();
+    }
+
+    // REQURIES: all parameter
+    // EFFECTS: creates a fully populated workout object (already)
+    public Workout(String id, String title, LocalDate date, Boolean isComplete, List<String> exercises,
+            List<String> comments) {
+        this.exercises = exercises;
+        this.date = date;
+        this.title = title;
+        this.comments = comments;
+        this.isComplete = isComplete;
+        this.id = id;
     }
 
     // EFFECTS: gets the title of the workout
@@ -66,7 +79,7 @@ public class Workout {
 
     // REQUIRE: workout has been created
     // MODIFIES: this
-    // EFFECTS: add commet to workout
+    // EFFECTS: add comment to workout
     public void addComment(String comment) {
         this.comments.add(comment);
 
