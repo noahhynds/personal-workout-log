@@ -1,0 +1,29 @@
+[
+    {
+        "Status": true,
+        "Comments": ["Was good", "Was strong"],
+        "Title": "W1",
+        "Exercises": [
+            "Bench Press",
+            "Pec Deck"
+        ],
+        "ID": "13412ae0-4123-4cb5-bf39-c7efc85830f6",
+        "Date": "2025-03-01"
+    },
+    {
+        "Status": false,
+        "Comments": ["Was tired"],
+        "Title": "W2",
+        "Exercises": ["Pull Ups", "Bicep curls"],
+        "ID": "68edab52-1a6a-4293-9785-2a84bc1c35ce",
+        "Date": "2025-02-25"
+    },
+    {
+        "Status": true,
+        "Comments": ["Hit PR"],
+        "Title": "W3",
+        "Exercises": ["Squats", "Leg press"],
+        "ID": "9b3e464a-462b-428c-9d58-f3aea0c1f445",
+        "Date": "2025-02-20"
+    }
+]
