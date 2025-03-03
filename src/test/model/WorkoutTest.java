@@ -23,7 +23,7 @@ public class WorkoutTest {
     void testWorkoutConstructor() {
         assertEquals(today, workout.getDate());
         assertEquals("Push 1", workout.getTitle());
-        assertTrue(workout.exercises.isEmpty());
+        assertTrue(workout.getAllExercises().isEmpty());
 
     }
 
@@ -38,9 +38,9 @@ public class WorkoutTest {
     @Test
     void testAddExercise() {
         workout.addExercise("Push Up");
-        assertEquals(1, workout.exercises.size());
+        assertEquals(1, workout.getAllExercises().size());
         assertTrue(workout.addExercise("Bench Press"));
-        assertEquals(2, workout.exercises.size());
+        assertEquals(2, workout.getAllExercises().size());
         assertFalse(workout.addExercise("Bench Press"));
 
         assertFalse(workout.addExercise(null));
