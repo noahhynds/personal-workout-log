@@ -97,10 +97,6 @@ public class JsonWriterTest extends JsonTest {
         checkDate(today, w2);
         checkDate(today, w3);
 
-        // checkId("b47d348d-a622-47a2-b79f-cfd69df36dcf", w1);
-        // checkId("74afd5a7-1ab7-40f3-b0a6-34e4976768ae", w1);
-        // checkId("0c4e9243-3706-46b3-bce7-1146cf92079d", w1);
-
         checkStatus(false, w1);
         checkStatus(false, w1);
         checkStatus(false, w1);
