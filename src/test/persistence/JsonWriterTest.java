@@ -80,9 +80,8 @@ public class JsonWriterTest extends JsonTest {
 
         // Write
         JsonWriter writer = new JsonWriter("./data/testWriteNormal.json");
-        // writer.open();
         writer.write(wl);
-        // writer.close();
+
 
         // Read
         JsonReader reader = new JsonReader("./data/testWriteNormal.json");

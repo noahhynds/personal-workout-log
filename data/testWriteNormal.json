@@ -1,32 +1,29 @@
 [
     {
         "Status": false,
-        "Comments": [
-            "Bench Press",
-            "Pec Deck"
-        ],
+        "Comments": ["Was good"],
         "Title": "W1",
         "Exercises": [
             "Bench Press",
             "Pec Deck"
         ],
-        "ID": "89ee9834-0e58-4542-be77-024fcbde7d43",
+        "ID": "3c9292b5-9a19-4253-9b19-86dc3e502e63",
         "Date": "2025-03-02"
     },
     {
         "Status": false,
-        "Comments": ["Pull Ups"],
+        "Comments": ["Was tired"],
         "Title": "W2",
         "Exercises": ["Pull Ups"],
-        "ID": "6aebcddc-d4bb-4c72-8abc-4932c6029ed2",
+        "ID": "3bd34928-928e-40f4-8b0d-a701b309542d",
         "Date": "2025-03-02"
     },
     {
         "Status": false,
-        "Comments": ["Squats"],
+        "Comments": ["Hit PR"],
         "Title": "W3",
         "Exercises": ["Squats"],
-        "ID": "950af3e5-d2ba-4364-8ac8-f280cb8da17b",
+        "ID": "bc544310-1272-436a-ae70-3eb4ba80d90f",
         "Date": "2025-03-02"
     },
     {
@@ -34,7 +31,7 @@
         "Comments": [],
         "Title": "W4",
         "Exercises": [],
-        "ID": "4d50b242-8005-49c3-b90a-a0944491c763",
+        "ID": "50e156b3-d47b-49d9-9971-2cc39c921ec1",
         "Date": "2025-03-02"
     }
 ]
