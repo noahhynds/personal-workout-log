@@ -1,6 +1,7 @@
 package ui;
 
 import model.*;
+import persistence.*;
 
 import java.util.Scanner;
 
@@ -9,16 +10,26 @@ public class ConsoleApp {
     private Boolean userNotQuit; // lets us know to keep running in main
     private Scanner scanner; // takes inputs from user
     private WorkoutLog workoutLog; // new workout log that stores all workouts
+    private JsonWriter jsonWriter;
+    private JsonReader jsonReader;
+    private static final String JSON_STORE = "./data/workoutlog.json";
 
     // EFFECTS: constructs app
     public ConsoleApp() {
         workoutLog = new WorkoutLog();
         userNotQuit = true;
         scanner = new Scanner(System.in);
+        jsonReader = new JsonReader(JSON_STORE);
+        jsonWriter = new JsonWriter(JSON_STORE);
     }
 
     // EFFECTS: runs application until user exits
     public void start() {
+        System.out.println("Press 'y' to load your saved workout log, otherwise will start a new one");
+        String input = scanner.nextLine();
+        if (input.toLowerCase().equals("y")) {
+            loadWorkoutLog();
+        }
         while (userNotQuit) {
             displayMenu();
             handleUserInput();
@@ -35,11 +46,16 @@ public class ConsoleApp {
         System.out.println("5. Mark a workout as complete");
         System.out.println("6. Quit");
         System.out.print("Choose an option (1-6): ");
-
     }
 
     // EFFECTS: quits app
     private void quitApp() {
+        System.out.println("Press 'y' to save, otherwise will exit without saving");
+        String input = scanner.nextLine();
+
+        if (input.toLowerCase().equals("y")) {
+            saveWorkoutLog();
+        }
         this.userNotQuit = false;
         System.out.println("Goodbye!");
 
@@ -191,6 +207,22 @@ public class ConsoleApp {
         } else {
             System.out.println("No workout found for that ID");
         }
+
+    }
+
+    // Used the JsonSterilizationDemo as a reference
+
+    // EFFECTS: saves the workroom to file
+    private void saveWorkoutLog() {
+        jsonWriter.write(workoutLog);
+        System.out.println("Saved to " + JSON_STORE);
+    }
+
+    // MODIFIES: this
+    // EFFECTS: loads workroom from file
+    private void loadWorkoutLog() {
+        workoutLog = jsonReader.load();
+        System.out.println("Loaded from " + JSON_STORE);
 
     }
 

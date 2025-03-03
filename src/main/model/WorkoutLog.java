@@ -4,7 +4,7 @@ import java.util.*;
 
 // Represents a list of all workouts
 public class WorkoutLog {
-    List<Workout> workouts;
+    private List<Workout> workouts;
 
     // EFFECTS: creates a workout log with a list of all workouts
     // starts off as empty
