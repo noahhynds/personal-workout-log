@@ -6,6 +6,7 @@ import javax.swing.*;
 
 import ui.WorkoutLogUI;
 
+// USED THE SMARTHOME AS REFERENCE
 public abstract class Tab extends JPanel {
 
     private final WorkoutLogUI workoutLog;
