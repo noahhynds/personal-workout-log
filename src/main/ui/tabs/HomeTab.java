@@ -1,19 +1,14 @@
 package ui.tabs;
 
-import java.awt.Color;
-
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import model.*;
-import ui.*;
+import model.Workout;
 import ui.WorkoutLogUI;
 import ui.Buttons;
 
 public class HomeTab extends Tab {
     private JLabel welcome;
-    private JPanel tutorial;
     private JButton addWrkt;
 
     // EFFECTS: crates home tab
@@ -39,8 +34,10 @@ public class HomeTab extends Tab {
     // EFFECTS: creates a new workout and adds it to the log
     public void addWorkoutButton() {
         String title = JOptionPane.showInputDialog(this, "What is the title?");
-
-        Workout workout = new Workout(title);
-
+        Workout workout = new Workout(title.trim());
+        getWorkoutLog().getWorkoutLog().addWorkoutToLog(workout);
+        getWorkoutLog().getWorkoutsTab().displayWorkouts();
+        JOptionPane.showMessageDialog(this, "Successfully added your workout");
     }
+
 }
