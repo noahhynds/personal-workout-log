@@ -1,42 +1,8 @@
-[
-    {
-        "Status": false,
-        "Comments": ["bench"],
-        "Title": "push",
-        "Exercises": ["bench"],
-        "ID": "99f4e9e4-8766-49e7-89e6-698c4462961e",
-        "Date": "2025-03-02"
-    },
-    {
-        "Status": false,
-        "Comments": [],
-        "Title": "pull",
-        "Exercises": [],
-        "ID": "702aa36c-bb0b-463c-ad93-dd6577701e63",
-        "Date": "2025-03-02"
-    },
-    {
-        "Status": false,
-        "Comments": ["squat"],
-        "Title": "test",
-        "Exercises": ["squat"],
-        "ID": "a814e153-b826-4f7c-8103-740f10d4c184",
-        "Date": "2025-03-02"
-    },
-    {
-        "Status": false,
-        "Comments": ["row"],
-        "Title": "test1",
-        "Exercises": ["row"],
-        "ID": "46d11f00-2855-41fd-a3ce-99b328fcde81",
-        "Date": "2025-03-02"
-    },
-    {
-        "Status": false,
-        "Comments": ["asdf"],
-        "Title": "final",
-        "Exercises": ["final"],
-        "ID": "e695d6ea-bc67-46ac-8ff8-008f86ca85a1",
-        "Date": "2025-03-02"
-    }
-]
+[{
+    "Status": false,
+    "Comments": [],
+    "Title": "Push Day 1",
+    "Exercises": ["Tricep pushdowns"],
+    "ID": "09abb424-b4f1-4960-86c0-805b9cdf3b7a",
+    "Date": "2025-03-22"
+}]
