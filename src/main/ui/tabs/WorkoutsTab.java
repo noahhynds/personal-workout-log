@@ -1,54 +1,41 @@
 package ui.tabs;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
+import java.awt.*;
 import javax.swing.*;
-
-import ui.Buttons;
 import ui.WorkoutLogUI;
-import model.*;
+import model.WorkoutLog;
+import model.Workout;
+import java.util.List;
 
 public class WorkoutsTab extends Tab {
-    private JButton viewWrkt;
-    private JButton addEx;
-    Workout workout;
-    WorkoutLog workoutLog;
+    private JTextArea workoutDisplayArea;
 
-    public WorkoutsTab(WorkoutLogUI workoutLog) {
-        super(workoutLog);
-        viewWorkoutsButton();
-        addExercisesButton();
+    public WorkoutsTab(WorkoutLogUI workoutLogUI) {
+        super(workoutLogUI);
+        setLayout(new BorderLayout());
+
+        workoutDisplayArea = new JTextArea();
+        workoutDisplayArea.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(workoutDisplayArea);
+
+        add(scrollPane, BorderLayout.CENTER);
     }
 
-    // EFFECTS: button to views workouts
-    public void viewWorkoutsButton() {
-        viewWrkt = new JButton();
-        viewWrkt.setBounds(50, 10, 100, 100);
-        viewWrkt.setText(Buttons.VIEW_WORKOUTS.getValue());
-        viewWrkt.setFocusable(false);
-        viewWrkt.addActionListener(e -> viewWorkoutsButton());
-        this.add(viewWrkt);
-    }
-
-    // EFFECTS: button to add exercise
-    public void addExercisesButton() {
-        addEx = new JButton();
-        addEx.setBounds(50, 30, 100, 100);
-        addEx.setText(Buttons.ADD_EXERCISE.getValue());
-        addEx.setFocusable(false);
-        this.add(addEx);
-    }
-
-    // EFFECTS: displays all workouts
+    // EFFECTS: displays all workouts along with their exercises
     public void displayWorkouts() {
-        // workoutLog.getWorkouts();
+        WorkoutLog workoutLog = getWorkoutLog().getWorkoutLog();
+        List<Workout> workouts = workoutLog.getWorkouts();
 
+        StringBuilder displayText = new StringBuilder();
+
+        for (Workout workout : workouts) {
+            displayText.append(workout.getTitle()).append("\n");
+            for (String exercise : workout.getAllExercises()) {
+                displayText.append("- ").append(exercise).append("\n");
+            }
+            displayText.append("\n"); // Add an empty line between workouts
+        }
+
+        workoutDisplayArea.setText(displayText.toString());
     }
-
-    // EFFECTS: add exercise to workout
-    public void addExercise() {
-        //
-    }
-
 }
