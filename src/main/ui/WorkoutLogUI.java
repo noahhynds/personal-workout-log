@@ -136,8 +136,9 @@ public class WorkoutLogUI extends JFrame implements ActionListener {
         }
     }
 
+    // EFFECTS: get workout tab
     public WorkoutsTab getWorkoutsTab() {
-        return (WorkoutsTab) sidebar.getComponentAt(1); // Assuming tab index 1 is your WorkoutsTab
+        return (WorkoutsTab) sidebar.getComponentAt(1);
     }
 
     // EFFECTS: loads workoutLog from file and refreshes UI
