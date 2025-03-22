@@ -31,8 +31,13 @@ public class WorkoutsTab extends Tab {
 
         for (Workout workout : workouts) {
             displayText.append(workout.getTitle()).append("\n");
+            displayText.append("   Exercises:").append("\n");
             for (String exercise : workout.getAllExercises()) {
-                displayText.append("- ").append(exercise).append("\n");
+                displayText.append("      - ").append(exercise).append("\n");
+            }
+            displayText.append("   Comments:").append("\n");
+            for (String comment : workout.getComments()) {
+                displayText.append("      - ").append(comment).append("\n");
             }
             displayText.append("\n"); // Add an empty line between workouts
         }
