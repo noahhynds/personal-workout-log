@@ -10,6 +10,7 @@ import java.util.List;
 public class WorkoutsTab extends Tab {
     private JTextArea workoutDisplayArea;
 
+    // EFFECTS: displays all workouts with exercises if they have been added
     public WorkoutsTab(WorkoutLogUI workoutLogUI) {
         super(workoutLogUI);
         setLayout(new BorderLayout());
