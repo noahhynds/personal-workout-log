@@ -49,7 +49,8 @@ public class OptionsTab extends Tab {
         workoutFrame.setVisible(true);
     }
 
-    // EFFECTS: Handles adding an exercise to the selected workout and closes the window
+    // EFFECTS: Handles adding an exercise to the selected workout and closes the
+    // window
     private void handleAddExercise(Workout workout, JFrame workoutFrame) {
         String exercise = JOptionPane.showInputDialog(this, "Enter exercise name for " + workout.getTitle() + ":");
 
