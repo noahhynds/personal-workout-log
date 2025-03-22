@@ -29,8 +29,8 @@ This functionality will include:
 
 ## Instructions for End User
 
-- You can generate the first required action related to the user story "adding multiple workouts to my log" through the home tab. You click on the CREATE NEW button.
-- You can generate the second required action related to the user story "adding multiple exercises to a workout" through the options tab. You click on the ADD EXERCISE button and a window pops up with workouts to choose from. You click on a workout and add an exercise.
+- To add workouts to the workout log. You click on the CREATE NEW button on the HOME TAB.
+- The OPTIONS TAB allows the user to add exercises and comments to a workout of choice. You either click on the ADD EXERCISE or ADD COMMENT. A window will pop up and you choose a workout to add your exercise or comment to.
 - You can locate my visual component by going to the tabs on the left. Workouts tab will see all the workouts with any exercises that were added.
-- You can save the state of my application by going to the FILE section in the top left and press save
-- You can reload the state of my application by going to the FIL section in the top left and press load
+- To view all workouts go to the WORKOUTS TAB. This will display all the workouts with exercises and comments.
+- To save, load, and quit go to the top left and click on the FILE. To save press SAVE, to load press LOAD, and to quit press QUIT.
