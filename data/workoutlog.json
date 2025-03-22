@@ -1,8 +1,24 @@
-[{
-    "Status": false,
-    "Comments": [],
-    "Title": "Push Day 1",
-    "Exercises": ["Tricep pushdowns"],
-    "ID": "09abb424-b4f1-4960-86c0-805b9cdf3b7a",
-    "Date": "2025-03-22"
-}]
+[
+    {
+        "Status": false,
+        "Comments": [],
+        "Title": "Push day 1",
+        "Exercises": [
+            "Incline dumbell chest press",
+            "Tricpe straight bar pushdowns"
+        ],
+        "ID": "d2ec1aa4-44e3-438a-af7a-05adff681ede",
+        "Date": "2025-03-22"
+    },
+    {
+        "Status": false,
+        "Comments": [],
+        "Title": "Pull (width focus)",
+        "Exercises": [
+            "Chest supported t-bar row",
+            "Bicep curls (ez bar)"
+        ],
+        "ID": "5580b96c-be98-4082-bbd1-99bb1e6d0aa1",
+        "Date": "2025-03-22"
+    }
+]
