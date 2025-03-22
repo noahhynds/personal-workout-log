@@ -25,3 +25,12 @@ This functionality will include:
 
 - As a user, I want to be able to save my workouts to file
 - As a user, I want to be able to load my workout histroy from file
+
+
+## Instructions for End User
+
+- You can generate the first required action related to the user story "adding multiple workouts to my log" through the home tab. You click on the CREATE NEW button.
+- You can generate the second required action related to the user story "adding multiple exercises to a workout" through the options tab. You click on the ADD EXERCISE button and a window pops up with workouts to choose from. You click on a workout and add an exercise.
+- You can locate my visual component by going to the tabs on the left. Workouts tab will see all the workouts with any exercises that were added.
+- You can save the state of my application by going to the FILE section in the top left and press save
+- You can reload the state of my application by going to the FIL section in the top left and press load
