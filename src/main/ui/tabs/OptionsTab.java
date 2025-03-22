@@ -1,13 +1,12 @@
 package ui.tabs;
 
-import java.awt.FlowLayout;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 import ui.WorkoutLogUI;
 import model.Workout;
 import model.WorkoutLog;
+import ui.Buttons;
 
 public class OptionsTab extends Tab {
     private JButton addExerciseButton;
@@ -19,8 +18,8 @@ public class OptionsTab extends Tab {
 
         this.setLayout(new FlowLayout());
 
-        addExerciseButton = new JButton("Add Exercise");
-        addCommentButton = new JButton("Add Comment");
+        addExerciseButton = new JButton(Buttons.ADD_EXERCISE.getValue());
+        addCommentButton = new JButton(Buttons.ADD_COMMENTS.getValue());
 
         this.add(addExerciseButton);
         this.add(addCommentButton);
