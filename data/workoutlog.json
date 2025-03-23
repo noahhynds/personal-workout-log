@@ -16,9 +16,18 @@
         "Title": "Pull (width focus)",
         "Exercises": [
             "Chest supported t-bar row",
-            "Bicep curls (ez bar)"
+            "Bicep curls (ez bar)",
+            "Lat Pull Downs"
         ],
         "ID": "5580b96c-be98-4082-bbd1-99bb1e6d0aa1",
+        "Date": "2025-03-22"
+    },
+    {
+        "Status": false,
+        "Comments": ["Felt good"],
+        "Title": "Legs",
+        "Exercises": ["Squats"],
+        "ID": "db5926ee-7b05-487e-abc7-73a02122edb7",
         "Date": "2025-03-22"
     }
 ]
