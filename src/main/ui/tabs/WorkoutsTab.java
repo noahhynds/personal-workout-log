@@ -29,12 +29,15 @@ public class WorkoutsTab extends Tab {
 
         StringBuilder displayText = new StringBuilder();
 
+        // Adds the workouts, exercises, and comments onto the WorkoutsTab
         for (Workout workout : workouts) {
             displayText.append(workout.getTitle()).append("\n");
             displayText.append("   Exercises:").append("\n");
+            // exercises
             for (String exercise : workout.getAllExercises()) {
                 displayText.append("      - ").append(exercise).append("\n");
             }
+            // comments
             displayText.append("   Comments:").append("\n");
             for (String comment : workout.getComments()) {
                 displayText.append("      - ").append(comment).append("\n");

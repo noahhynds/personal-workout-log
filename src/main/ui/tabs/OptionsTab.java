@@ -18,12 +18,14 @@ public class OptionsTab extends Tab {
 
         this.setLayout(new FlowLayout());
 
+        // Buttons
         addExerciseButton = new JButton(Buttons.ADD_EXERCISE.getValue());
         addCommentButton = new JButton(Buttons.ADD_COMMENTS.getValue());
 
         this.add(addExerciseButton);
         this.add(addCommentButton);
 
+        // Action Listeners
         addExerciseButton.addActionListener(e -> showWorkoutSelectionWindowExercise());
         addCommentButton.addActionListener(e -> showWorkoutSelectionWindowComment());
     }
@@ -33,6 +35,7 @@ public class OptionsTab extends Tab {
         WorkoutLog workoutLog = getWorkoutLog().getWorkoutLog();
         List<Workout> workouts = workoutLog.getWorkouts();
 
+        // Check if workouts exist
         if (workouts.isEmpty()) {
             JOptionPane.showMessageDialog(this, "No workouts available. Create one first.");
             return;
@@ -42,6 +45,7 @@ public class OptionsTab extends Tab {
         JFrame workoutFrame = new JFrame("Select a Workout");
         workoutFrame.setLayout(new GridLayout(0, 1));
 
+        // EFFECTS: Shows a window with all workouts as buttons
         for (Workout workout : workouts) {
             JButton workoutButton = new JButton(workout.getTitle());
             workoutButton.addActionListener(e -> handleAddExercise(workout, workoutFrame));
@@ -58,6 +62,7 @@ public class OptionsTab extends Tab {
         WorkoutLog workoutLog = getWorkoutLog().getWorkoutLog();
         List<Workout> workouts = workoutLog.getWorkouts();
 
+        // Check if workouts exist
         if (workouts.isEmpty()) {
             JOptionPane.showMessageDialog(this, "No workouts available. Create one first.");
             return;
@@ -67,6 +72,7 @@ public class OptionsTab extends Tab {
         JFrame workoutFrame = new JFrame("Select a Workout");
         workoutFrame.setLayout(new GridLayout(0, 1));
 
+        // Displays workouts as buttons
         for (Workout workout : workouts) {
             JButton workoutButton = new JButton(workout.getTitle());
             workoutButton.addActionListener(e -> handleAddComment(workout, workoutFrame));

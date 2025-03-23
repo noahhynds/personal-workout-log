@@ -62,6 +62,7 @@ public class WorkoutLogUI extends JFrame implements ActionListener {
 
     // EFFECTS: loads home and workouts tab
     public void loadTabs() {
+        // side tabs
         JPanel homeTab = new HomeTab(this);
         JPanel workoutsTab = new WorkoutsTab(this);
         JPanel optionsTab = new OptionsTab(this);
@@ -77,6 +78,7 @@ public class WorkoutLogUI extends JFrame implements ActionListener {
 
     // EFFECTS: creates menu bar to save, load, and quit
     public void menuBar() {
+        // file menu
         menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("File");
         menuBar.add(fileMenu);
