@@ -23,6 +23,10 @@ public class WorkoutLog {
 
         if (!workouts.contains(workout)) {
             workouts.add(workout);
+            
+            // EventLog
+            EventLog.getInstance().logEvent(new Event("Workout added to log: " + workout.getTitle()));
+            
             return true;
         }
         return false;
