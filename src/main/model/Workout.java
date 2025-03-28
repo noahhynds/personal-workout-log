@@ -48,6 +48,9 @@ public class Workout {
     // EFFECTS: sets the date of the workout
     public void setDate(LocalDate date) {
         this.date = date;
+
+        // EventLog
+        EventLog.getInstance().logEvent(new Event("Date for workout set: " + date));
     }
 
     // EFFECTS: get the date of the workout
@@ -72,6 +75,10 @@ public class Workout {
 
         if (!exercises.contains(exercise)) {
             exercises.add(exercise);
+
+            // EventLog
+            EventLog.getInstance().logEvent(new Event("Exercise added to workout: " + exercise));
+
             return true;
         }
         return false;
@@ -82,6 +89,8 @@ public class Workout {
     // EFFECTS: add comment to workout
     public void addComment(String comment) {
         this.comments.add(comment);
+        // EventLog
+        EventLog.getInstance().logEvent(new Event("Comment added to workout: " + comment));
 
     }
 
@@ -104,6 +113,9 @@ public class Workout {
     // EFFECTS: mark workout as complete
     public void markWorkoutAsComplete() {
         this.isComplete = true;
+
+        // EventLog
+        EventLog.getInstance().logEvent(new Event("Workout marked as complete"));
 
     }
 
