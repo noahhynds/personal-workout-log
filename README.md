@@ -33,4 +33,4 @@ This functionality will include:
 - The OPTIONS TAB allows the user to add exercises and comments to a workout of choice. You either click on the ADD EXERCISE or ADD COMMENT. A window will pop up and you choose a workout to add your exercise or comment to.
 - You can locate my visual component by going to the tabs on the left. Workouts tab will see all the workouts with any exercises that were added.
 - To view all workouts go to the WORKOUTS TAB. This will display all the workouts with exercises and comments.
-- To save, load, and quit go to the top left and click on the FILE. To save press SAVE, to load press LOAD, and to quit press QUIT. You can also quit by closing the window itself.
+- To save, load, and quit go to the top left and click on the FILE. To save press SAVE, to load press LOAD, and to quit press QUIT.
