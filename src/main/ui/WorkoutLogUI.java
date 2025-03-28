@@ -41,7 +41,7 @@ public class WorkoutLogUI extends JFrame implements ActionListener {
     public WorkoutLogUI() {
         super("WorkoutLog");
 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setSize(width, height);
         workoutLog = new WorkoutLog();
         sidebar = new JTabbedPane();
@@ -123,7 +123,16 @@ public class WorkoutLogUI extends JFrame implements ActionListener {
             saveWorkoutLog();
         }
         if (e.getSource() == quitItem) {
+            printLog();
             System.exit(0);
+
+        }
+    }
+
+    private void printLog() {
+        System.out.println("EVENT LOG:");
+        for (Event e : EventLog.getInstance()) {
+            System.out.println(e);
         }
     }
 
