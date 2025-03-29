@@ -50,7 +50,7 @@ public class Workout {
         this.date = date;
 
         // EventLog
-        EventLog.getInstance().logEvent(new Event("Date for workout set: " + date));
+        EventLog.getInstance().logEvent(new Event("Date: " + date + " for workout set"));
     }
 
     // EFFECTS: get the date of the workout
@@ -77,7 +77,7 @@ public class Workout {
             exercises.add(exercise);
 
             // EventLog
-            EventLog.getInstance().logEvent(new Event("Exercise added to workout: " + exercise));
+            EventLog.getInstance().logEvent(new Event("Exercise: " + exercise + " added to: " + this.getTitle()));
 
             return true;
         }
@@ -90,7 +90,7 @@ public class Workout {
     public void addComment(String comment) {
         this.comments.add(comment);
         // EventLog
-        EventLog.getInstance().logEvent(new Event("Comment added to workout: " + comment));
+        EventLog.getInstance().logEvent(new Event("Comment: " + comment + " added to: " + this.getTitle()));
 
     }
 
@@ -115,7 +115,7 @@ public class Workout {
         this.isComplete = true;
 
         // EventLog
-        EventLog.getInstance().logEvent(new Event("Workout marked as complete"));
+        EventLog.getInstance().logEvent(new Event(this.getTitle() + " marked as complete"));
 
     }
 

@@ -25,7 +25,7 @@ public class WorkoutLog {
             workouts.add(workout);
 
             // EventLog
-            EventLog.getInstance().logEvent(new Event("Workout added to log: " + workout.getTitle()));
+            EventLog.getInstance().logEvent(new Event("Workout: " + workout.getTitle() + " added to log"));
 
             return true;
         }
