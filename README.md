@@ -34,3 +34,31 @@ This functionality will include:
 - You can locate my visual component by going to the tabs on the left. Workouts tab will see all the workouts with any exercises that were added.
 - To view all workouts go to the WORKOUTS TAB. This will display all the workouts with exercises and comments.
 - To save, load, and quit go to the top left and click on the FILE. To save press SAVE, to load press LOAD, and to quit press QUIT.
+
+## Phase 4: Task 2
+
+- EVENT LOG:
+Sat Mar 29 12:49:46 PDT 2025
+Workout: Push Day 1 added to log
+Sat Mar 29 12:49:52 PDT 2025
+Workout: Pull Day 1 added to log
+Sat Mar 29 12:49:57 PDT 2025
+Workout: Legs Day 1 added to log
+Sat Mar 29 12:50:09 PDT 2025
+Exercise: Bench Press added to: Push Day 1
+Sat Mar 29 12:50:23 PDT 2025
+Exercise: Shoulder Press added to: Push Day 1
+Sat Mar 29 12:50:32 PDT 2025
+Exercise: Pull ups added to: Pull Day 1
+Sat Mar 29 12:50:41 PDT 2025
+Exercise: Barbell row added to: Pull Day 1
+Sat Mar 29 12:50:46 PDT 2025
+Exercise: Squats added to: Legs Day 1
+Sat Mar 29 12:50:54 PDT 2025
+Exercise: Hamstring curls added to: Legs Day 1
+Sat Mar 29 12:51:00 PDT 2025
+Comment: Felt strong added to: Push Day 1
+Sat Mar 29 12:51:12 PDT 2025
+Comment: Hit a PR added to: Pull Day 1
+Sat Mar 29 12:51:18 PDT 2025
+Comment: Felt tired added to: Legs Day 1
