@@ -65,4 +65,4 @@ Comment: Felt tired added to: Legs Day 1
 
 ## Phase 4: Task 3
 
-- If I had more time I would refactor the methods that allow the user to add a commment and an exercise. They have the exact same function (both have a window popping up and both allow the user to click onto a workou) they just add either comments or exercises (end up in different location).
+- If I had more time I would refactor the methods that allow the user to add a commment and an exercise. They have the exact same function (both have a window popping up and both allow the user to click onto a workout) they just add either comments or exercises (end up in different location). These methods are in the OptionsTab in ui.tab.
