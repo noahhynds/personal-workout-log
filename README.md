@@ -1,4 +1,4 @@
-# My Personal Gym Log (Academic 2025)
+# My Personal Gym Log (Academic 2024/2025)
 
 
 This application is a weight training workout log. This training log will be used by myself to track my progress over time. This application is of interest to me as weight training is one of my main recreational activities.
