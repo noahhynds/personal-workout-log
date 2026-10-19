@@ -1,4 +1,4 @@
-# My Personal Gym Log (CPSC210)
+# My Personal Gym Log (Academic)
 
 
 This application is a weight training workout log. This training log will be used by myself to track my progress over time. This application is of interest to me as weight training is one of my main recreational activities.
